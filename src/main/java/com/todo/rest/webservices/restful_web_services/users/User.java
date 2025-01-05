@@ -2,10 +2,15 @@ package com.todo.rest.webservices.restful_web_services.users;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
+
 public class User {
 
 	private int id;
+	@Size(min =2)
 	private String name;
+	@Past
 	private LocalDate birthDate;
 	public User(int id, String name, LocalDate birthDate) {
 		super();
